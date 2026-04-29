@@ -9,7 +9,27 @@ Este projeto demonstra uma implementação de busca de CEP com lógica de fallba
 
 ## Como Executar
 
-### Pré-requisitos
+### Docker (Recomendado)
+
+O projeto está totalmente containerizado com Docker Compose, oferecendo ambientes de desenvolvimento e produção isolados.
+
+**Modo Desenvolvimento (Hot Reload):**
+```bash
+docker compose --profile dev up --build
+```
+- Frontend: `http://localhost:5173`
+- Backend: `http://localhost:3333`
+
+**Modo Produção:**
+```bash
+docker compose --profile prod up --build
+```
+- Frontend: `http://localhost:8080`
+- Backend: `http://localhost:3333`
+
+---
+
+### Execução Local (Sem Docker)
 - Node.js (v18 ou superior)
 - npm ou yarn
 

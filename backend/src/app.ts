@@ -14,6 +14,11 @@ app.use(
 );
 app.use(express.json());
 
+// Healthcheck
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
 // Routes
 app.use("/cep", cepRoutes);
 
